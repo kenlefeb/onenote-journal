@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Notes</title>
+  <script type="text/javascript"
+          src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js">
+  </script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Daily Notes</h1>
+    </header>
+
+    <main>
+      <section class="date-picker-section">
+        <label for="date-input">Select date:</label>
+        <div class="date-input-row">
+          <input type="date" id="date-input" />
+          <button id="add-date-button" class="secondary-button">Add</button>
+        </div>
+      </section>
+
+      <section class="selected-dates-section">
+        <h2>Selected Dates</h2>
+        <ul id="selected-dates-list"></ul>
+      </section>
+
+      <button id="create-button" class="primary-button" disabled>
+        Create Daily Notes
+      </button>
+
+      <div id="status" class="status-area" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+</body>
+</html>

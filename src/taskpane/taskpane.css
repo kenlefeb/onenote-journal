@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+}
+
+#app {
+  padding: 16px;
+  max-width: 320px;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #7719aa;
+}
+
+main section {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.date-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+#date-input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#selected-dates-list {
+  list-style: none;
+  padding: 0;
+}
+
+#selected-dates-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.remove-date-button {
+  background: none;
+  border: none;
+  color: #c00;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+}
+
+.remove-date-button:hover {
+  color: #900;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 10px 16px;
+  background: #7719aa;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #5e1387;
+}
+
+.primary-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  padding: 6px 12px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: #e0e0e0;
+}
+
+.status-area {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  min-height: 20px;
+}
+
+.status-area.success {
+  background: #e6f4ea;
+  color: #1a7431;
+}
+
+.status-area.error {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.status-area.info {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
