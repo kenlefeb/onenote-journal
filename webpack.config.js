@@ -64,8 +64,10 @@ module.exports = async (env, options) => {
 
   if (dev) {
     config.devServer = {
+      allowedHosts: "all",
       headers: {
         "Access-Control-Allow-Origin": "*",
+        "Content-Security-Policy": "default-src 'self' https://appsforoffice.microsoft.com; script-src 'self' https://appsforoffice.microsoft.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
       },
       server: {
         type: "https",
