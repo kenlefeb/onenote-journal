@@ -6,6 +6,9 @@ const mockContext = {
   ...createMockContext(),
   application: {
     getActiveNotebook: () => mockNotebook,
+    navigateToPage: () => {
+      // no-op in mock
+    },
   },
 };
 

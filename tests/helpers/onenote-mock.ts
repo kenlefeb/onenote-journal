@@ -119,6 +119,9 @@ export interface MockNotebook {
 
 export interface MockContext {
   sync: () => Promise<void>;
+  application: {
+    navigateToPage: (_page: MockPage) => void;
+  };
 }
 
 export function createMockNotebook(name: string, existingGroups: MockSectionGroup[] = []): MockNotebook {
@@ -141,6 +144,11 @@ export function createMockContext(): MockContext {
   return {
     sync: async () => {
       // no-op in mock
+    },
+    application: {
+      navigateToPage: (_page: MockPage) => {
+        // no-op in mock
+      },
     },
   };
 }

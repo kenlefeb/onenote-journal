@@ -65,9 +65,26 @@ module.exports = async (env, options) => {
   if (dev) {
     config.devServer = {
       allowedHosts: "all",
+      hot: false,
+      liveReload: false,
+      webSocketServer: false,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Content-Security-Policy": "default-src 'self' https://appsforoffice.microsoft.com; script-src 'self' https://appsforoffice.microsoft.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+        "Access-Control-Allow-Private-Network": "true",
+      },
+      setupMiddlewares: (middlewares, devServer) => {
+        devServer.app.use((req, res, next) => {
+          if (req.method === "OPTIONS") {
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+            res.setHeader("Access-Control-Allow-Headers", req.headers["access-control-request-headers"] || "*");
+            res.setHeader("Access-Control-Allow-Private-Network", "true");
+            res.status(204).end();
+            return;
+          }
+          next();
+        });
+        return middlewares;
       },
       server: {
         type: "https",

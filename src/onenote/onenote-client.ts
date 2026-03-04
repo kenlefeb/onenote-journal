@@ -43,6 +43,11 @@ export async function createPage(
   html: string
 ): Promise<void> {
   const page = section.addPage(title);
+  await context.sync();
+
+  context.application.navigateToPage(page);
+  await context.sync();
+
   page.addOutline(OUTLINE_LEFT_POSITION, OUTLINE_TOP_POSITION, html);
   await context.sync();
 }
