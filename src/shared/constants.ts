@@ -1,0 +1,2 @@
+export const OUTLINE_LEFT_POSITION = 40;
+export const OUTLINE_TOP_POSITION = 90;
