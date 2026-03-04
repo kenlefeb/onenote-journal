@@ -15,7 +15,7 @@
 
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/kenlefeb/onenote-cli"/>
+  <SupportUrl DefaultValue="https://github.com/kenlefeb/onenote-journal"/>
 
   <AppDomains>
     <AppDomain>https://localhost:3000</AppDomain>
@@ -81,7 +81,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/kenlefeb/onenote-cli"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/kenlefeb/onenote-journal"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with Daily Notes"/>
